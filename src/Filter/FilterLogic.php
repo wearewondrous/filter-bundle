@@ -327,7 +327,7 @@ class FilterLogic extends AbstractContextAwareFilter
         $queryBuilder->add('join', $result);
     }
 
-    private function getPropertiesFromSearchFilter(ReflectionClass $class): ?array
+    private function getPropertiesFromSearchFilter(\ReflectionClass $class): ?array
     {
         $apiFilterAttributes = $class->getAttributes('ApiPlatform\Core\Annotation\ApiFilter', ReflectionAttribute::IS_INSTANCEOF);
 
@@ -340,7 +340,7 @@ class FilterLogic extends AbstractContextAwareFilter
         return null;
     }
 
-    private function isFilterLogicFilter(ReflectionClass $class): bool
+    private function isFilterLogicFilter(\ReflectionClass $class): bool
     {
         $apiFilterAttributes = $class->getAttributes('ApiPlatform\Core\Annotation\ApiFilter', ReflectionAttribute::IS_INSTANCEOF);
 
